@@ -1,0 +1,350 @@
+:root
+{
+    --primary: #50D6A7;
+}
+
+/* Keyframes */
+@keyframes hamburger_puls 
+{
+	0% 
+    {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% 
+    {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+@keyframes text_reveal_box 
+{
+	50% 
+    {
+		width: 100%;
+		left: 0;
+	}
+	100% 
+    {
+		width: 0;
+		left: 0;
+	}
+}
+@keyframes text_reveal 
+{
+	100% 
+    {
+		color: white;
+	}
+}
+@keyframes text_reveal_name 
+{
+	100% 
+    {
+		color: white;
+		
+	}
+}
+/* End Keyframes */
+
+
+
+.welcome-text span
+{
+    font-family: 'Times New Roman', Times;
+    transform-style: preserve-3d;
+    perspective: 400;
+    z-index: 1;
+    position: relative;
+    animation: letter 2s ease-in-out ;
+    animation-duration: 2s;
+    animation-delay: calc(0.5s * var(--i));
+}
+@keyframes letter
+{
+    0%   {right: -1000px}
+    100% {right: 0px}  
+    0%
+    {
+        transform: translateY(0px);
+    }
+    20%
+    {
+        transform: translateY(-20px);
+    }
+    40%,100%
+    {
+        transform: translateY(0px);
+    }
+}	
+#welcome h1
+{
+    animation: heading 3s ease-in-out;
+    position: relative;
+    animation-fill-mode: forwards;
+
+}
+@keyframes heading
+{
+    0%   {right: -1000px}
+    100% {right: 0px}  
+}
+
+
+#hero
+{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/*Animated Squares in the background of the Welcome Section.*/
+.circles
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.circles li
+{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #4a745ae3;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+.circles li:nth-child(1)
+{
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+.circles li:nth-child(2)
+{
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+.circles li:nth-child(4)
+{
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+.circles li:nth-child(5)
+{
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+.circles li:nth-child(6)
+{
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+.circles li:nth-child(7)
+{
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+.circles li:nth-child(8)
+{
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+.circles li:nth-child(9)
+{
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+.circles li:nth-child(10)
+{
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+/*Animation for the background Squares (First Section)*/
+@keyframes animate 
+{
+    0%
+    {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+
+/*The Welcome Yellow Text - Styling*/
+.deconstructed 
+{
+    position: relative;
+    margin: auto;
+    padding-bottom: 20px;
+    color: transparent;
+    font-family: 'Cambay';
+    font-size: 8rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.03em;
+}
+
+.deconstructed > div 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #d4af37;
+    pointer-events: none;
+}
+
+.deconstructed > div:nth-child(1) 
+{
+    -webkit-mask-image: linear-gradient(black 25%, transparent 25%);
+    mask-image: linear-gradient(black 25%, transparent 25%);
+    animation: deconstructed1 7s  ease-in-out;
+    animation-iteration-count: 2;
+}
+
+.deconstructed > div:nth-child(2) 
+{
+    -webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+    mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+    animation: deconstructed2 7s  ease-in-out;
+    animation-iteration-count: 2;
+}
+
+.deconstructed > div:nth-child(3) {
+    -webkit-mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+    mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+    animation: deconstructed3 7s  ease-in-out;
+    animation-iteration-count: 2;
+}
+
+.deconstructed > div:nth-child(4) {
+    -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
+    mask-image: linear-gradient(transparent 75%, black 75%);
+    animation: deconstructed4 7s  ease-in-out;
+    animation-iteration-count: 2;
+}
+
+@keyframes deconstructed1 
+{
+    0% 
+    {
+    transform: translateX(100%);
+    }
+    26% 
+    {
+    transform: translateX(0%);
+    }
+    83% 
+    {
+    transform: translateX(-0.1%);
+    }
+    100%
+    {
+    transform: translateX(-120%);
+    }
+}
+
+@keyframes deconstructed2 
+{
+    0% {
+    transform: translateX(100%);
+    }
+    24% {
+    transform: translateX(0.5%);
+    }
+    82% {
+    transform: translateX(-0.2%);
+    }
+    100% {
+    transform: translateX(-125%);
+    }
+}
+
+@keyframes deconstructed3 
+{
+    0% {
+    transform: translateX(100%);
+    }
+    22% {
+    transform: translateX(0%);
+    }
+    81% {
+    transform: translateX(0%);
+    }
+    100% {
+    transform: translateX(-130%);
+    }
+}
+
+@keyframes deconstructed4 
+{
+    0% {
+    transform: translateX(100%);
+    }
+    20% {
+    transform: translateX(0%);
+    }
+    80% {
+    transform: translateX(0%);
+    }
+    100% {
+    transform: translateX(-135%);
+    }
+}

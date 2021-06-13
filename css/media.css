@@ -1,0 +1,489 @@
+:root
+{
+    --primary: #50D6A7;
+}
+
+/*Responsive Design for smaller screens*/
+@media(max-width:600px)
+{
+    /* .p-b-container
+    {
+		grid-template-columns:1fr ;
+        grid-template-rows: auto;
+    } */
+
+	.hero h2
+	{
+		padding-top: 20px;
+		font-size: 12px;
+		font-weight: 500;
+	}
+	.welcome-text span
+	{
+		font-size: 2.5em;
+		color: var(--primary);
+		font-weight: 600;
+	}
+	.deconstructed 
+	{
+		font-size: 5rem;
+	}
+	.project-info button
+	{
+		text-align: center ;
+		padding: 10px 10px;
+	}
+     /*Gallery Styling*/
+     .hover-text h1, .hover-text2 h1, .hover-text3 h1,
+     .hover-text4 h1, .hover-text5 h1, .hover-text6 h1
+     {
+         display: none;
+     }
+     .p-box:hover .hover-text, .p-box:hover .hover-text2, .p-box:hover .hover-text3,
+     .p-box:hover .hover-text4, .p-box:hover .hover-text5, .p-box:hover .hover-text6
+     {
+         display: none;
+     }
+     .img-container
+     {
+		
+        grid-template-columns: repeat(2, 1fr);
+     }
+}
+@media(max-width:465px)
+{
+	.brand h1
+	{
+		font-family: 'New Romantics', sans-serif;                       
+		font-size: 2.9rem;
+	}
+	.brand h1 span 
+	{
+		font-family: 'New Romantics', sans-serif;                                      
+		font-size: 2.3rem !important;
+		color: #50D6A7;
+	}
+	.hero h2
+	{
+		font-size: 12px;
+		font-weight: 500;
+	}
+	.welcome-text span
+	{
+		font-size: 2.5em;
+		color: var(--primary);
+		font-weight: 600;
+	}
+	.deconstructed 
+	{
+		font-size: 5rem;
+	}
+	.project-info button
+	{
+		text-align: center ;
+		padding: 10px 10px;
+	}
+     /*Gallery Styling*/
+     .hover-text h1, .hover-text2 h1, .hover-text3 h1,
+     .hover-text4 h1, .hover-text5 h1, .hover-text6 h1
+     {
+         display: none;
+     }
+     .p-box:hover .hover-text, .p-box:hover .hover-text2, .p-box:hover .hover-text3,
+     .p-box:hover .hover-text4, .p-box:hover .hover-text5, .p-box:hover .hover-text6
+     {
+         display: none;
+     }
+     .img-container
+     {
+        width: 90%;
+        height: 170vh;
+        grid-template-columns: repeat(1, 1fr);
+     }
+     #grids 
+     {
+        display: block;
+     }
+}
+
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) 
+{
+
+	.brand h1
+	{
+		font-family: 'Times New Roman', Times;                       
+		font-size: 5rem;
+	}
+	.cta 
+    {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title 
+    {
+		font-size: 6rem;
+	}
+
+	/* Hero */
+	.hero h2
+	{
+		padding-top: 20;
+		font-size: 3rem;
+	}
+	.deconstructed 
+	{
+		font-size: 8rem;
+		font-weight: 500;
+	}
+	/* End Hero */
+
+	/* Services Section */
+	#services .service-bottom .service-item 
+    {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+	/* End Services Section */
+
+	/* Project */
+	.project-info button
+	{
+		text-align: center;
+		font-size: 2rem;
+		padding: 10px 30px;
+		justify-content: center;
+	}
+	#projects .project-item 
+    {
+		flex-direction: row;
+	}
+	#projects .project-item:nth-child(even) 
+    {
+		flex-direction: row-reverse;
+	}
+	#projects .project-item 
+    {
+		height: 400px;
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+	#projects .all-projects .project-info 
+    {
+		height: 100%;
+	}
+	#projects .all-projects .project-img 
+    {
+		height: 100%;
+	}
+	/* End Project */
+
+	/*Gallery Page*/
+	.img-container
+     {
+        flex-wrap: wrap;
+     }
+
+	/* contact  */
+	#contact .contact 
+    {
+		flex-direction: column;
+		padding: 100px 0;
+		align-items: center;
+		justify-content: center;
+		min-width: 20vh;
+	}
+	#contact .contact-items 
+    {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin: 0;
+	}
+	#contact .contact-item 
+    {
+		width: 30%;
+		margin: 0;
+		flex-direction: row;
+	}
+	#contact .contact-item .icon 
+    {
+		height: 100px;
+		width: 100px;
+	}
+	#contact .contact-item .icon img 
+    {
+		object-fit: contain;
+	}
+	#contact .contact-item .contact-info 
+    {
+		width: 100%;
+		text-align: left;
+		padding-left: 20px;
+	}
+	/* End contact  */
+
+
+	.welcome-text span
+    {
+        position: relative;
+        font-size: 6em;
+        font-weight: 500;
+        animation: letter 2s ease-in-out ;
+        animation-duration: 2s;
+        animation-delay: calc(0.5s * var(--i));
+    }
+    @keyframes letter
+    {
+        0%   {right: -1000px}
+        100% {right: 0px}  
+        0%
+        {
+            transform: translateY(0px);
+        }
+        20%
+        {
+            transform: translateY(-20px);
+        }
+        40%,100%
+        {
+            transform: translateY(0px);
+        }
+    }	
+
+	.letter
+	{
+		font-weight: 900;
+		font-size: 8.8em;
+		margin: 0.2em;
+		position: relative;
+		color: black;
+		transform-style: preserve-3d;
+		perspective: 400;
+		z-index: 1;
+	}
+	.letter:before, .letter:after
+	{
+		position:absolute;
+		content: attr(data-letter);
+		transform-origin: top left;
+		top:0;
+		left:0;
+	}
+	.letter, .letter:before, .letter:after
+	{
+		transition: all 0.3s ease-in-out;
+	}
+	.letter:before
+	{
+		color: var(--primary);
+		text-shadow: 
+			-1px 0px 1px rgba(255,255,255,.8),
+			1px 0px 1px rgba(0,0,0,.8);
+		z-index: 3;
+		transform:
+			rotateX(0deg)
+			rotateY(-15deg)
+			rotateZ(0deg);
+	}
+	.letter:after
+	{
+		color: rgba(0,0,0,.11);
+		z-index:2;
+		transform:
+			scale(1.08,1)
+			rotateX(0deg)
+			rotateY(0deg)
+			rotateZ(0deg)
+			skew(0deg,1deg);
+	}
+	.letter:hover:before
+	{
+		color: #0f1e29;
+		transform:
+			rotateX(0deg)
+			rotateY(-40deg)
+			rotateZ(0deg);
+	}
+	.letter:hover:after
+	{
+		transform:
+			scale(1.08,1)
+			rotateX(0deg)
+			rotateY(40deg)
+			rotateZ(0deg)
+			skew(0deg,22deg);
+	}
+	.viework
+	{
+		animation-name: view;
+		animation-duration: 3s;
+		animation-delay: 2.5s;
+		animation-fill-mode: forwards;
+		position: relative;
+		opacity: 0;
+	}
+
+}
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) 
+{
+	/* header */
+	#header .hamburger 
+    {
+		display: none;
+	}
+	#header .nav-list ul 
+    {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li 
+    {
+		display: inline-block;
+	}
+	#header .nav-list ul li a 
+    {
+		font-size: 1.8rem;
+	}
+	#header .nav-list ul a:after 
+    {
+		display: none;
+	}
+	/* End header */
+
+	.brand h1
+	{
+		font-family: 'Times New Roman', Times;                       
+		font-size: 5rem;
+	}
+	#services .service-bottom .service-item 
+    {
+		flex-basis: 22%;
+		margin: 1.5%;
+	}
+
+    #projects .project-info h1
+    {
+        text-align: center;
+    }
+	.project-info button
+	{
+		text-align: center ;
+		font-size: 2rem;
+		height: 40px;
+		padding: 10px 30px;
+		justify-content: center;
+	}
+
+	.welcome-text span
+    {
+        position: relative;
+        font-size: 7em;
+        font-weight: 500;
+        animation: letter 2s ease-in-out ;
+        animation-duration: 2s;
+        animation-delay: calc(0.5s * var(--i));
+		text-align: center;
+    }
+    @keyframes letter
+    {
+        0%   {right: -1000px}
+        100% {right: 0px}  
+        0%
+        {
+            transform: translateY(0px);
+        }
+        20%
+        {
+            transform: translateY(-20px);
+        }
+        40%,100%
+        {
+            transform: translateY(0px);
+        }
+    }	
+
+	.letter
+	{
+		font-weight: 900;
+		font-size: 8em;
+		margin: 0.2em;
+		position: relative;
+		color: black;
+		transform-style: preserve-3d;
+		perspective: 400;
+		z-index: 1;
+	}
+	.letter:before, .letter:after
+	{
+		position:absolute;
+		content: attr(data-letter);
+		transform-origin: top left;
+		top:0;
+		left:0;
+	}
+	.letter, .letter:before, .letter:after
+	{
+		transition: all 0.3s ease-in-out;
+	}
+	.letter:before
+	{
+		color: var(--primary);
+		text-shadow: 
+			-1px 0px 1px rgba(255,255,255,.8),
+			1px 0px 1px rgba(0,0,0,.8);
+		z-index: 3;
+		transform:
+			rotateX(0deg)
+			rotateY(-15deg)
+			rotateZ(0deg);
+	}
+
+	.letter:after
+	{
+		color: rgba(0,0,0,.11);
+		z-index:2;
+		transform:
+			scale(1.08,1)
+			rotateX(0deg)
+			rotateY(0deg)
+			rotateZ(0deg)
+			skew(0deg,1deg);
+	}
+	.letter:hover:before
+	{
+		color: #0f1e29;
+		transform:
+			rotateX(0deg)
+			rotateY(-40deg)
+			rotateZ(0deg);
+	}
+	.letter:hover:after
+	{
+		transform:
+			scale(1.08,1)
+			rotateX(0deg)
+			rotateY(40deg)
+			rotateZ(0deg)
+			skew(0deg,22deg);
+	}
+	.viework
+	{
+		animation-name: view;
+		animation-duration: 3s;
+		animation-delay: 2.5s;
+		animation-fill-mode: forwards;
+		position: relative;
+		opacity: 0;
+	}
+}
+/* End  Media Query For Desktop */
