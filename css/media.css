@@ -12,6 +12,11 @@
         grid-template-rows: auto;
     } */
 
+	.brand h1
+	{
+		font-family: 'Times New Roman', Times;                               
+		font-size: 2.9rem;
+	}
 	.hero h2
 	{
 		padding-top: 20px;
@@ -54,12 +59,12 @@
 {
 	.brand h1
 	{
-		font-family: 'New Romantics', sans-serif;                       
+		font-family: 'Times New Roman', Times;                               
 		font-size: 2.9rem;
 	}
 	.brand h1 span 
 	{
-		font-family: 'New Romantics', sans-serif;                                      
+		font-family: 'New Romantics';                                      
 		font-size: 2.3rem !important;
 		color: #50D6A7;
 	}
